@@ -11,7 +11,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imageLaptop from '@/images/laptop.jpg'
+import imageFamily from '@/images/desenhoazul.png'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
 
@@ -55,27 +55,16 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Research & Analysis" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          We begin by conducting comprehensive <strong className="font-semibold text-neutral-950">market research</strong> and analysis to understand your business and the untapped potential of the outdoor audience market in your region.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          Our team works closely with you to gather data on local demographics, outdoor recreational patterns, and consumer behaviors. We identify the unique opportunities that exist for businesses of all sizes to connect with people who spend time outdoors.
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          Through surveys, interviews, and data analysis, we develop a clear picture of the <strong className="font-semibold text-neutral-950">market landscape</strong> and create a foundation for a tailored strategy that aligns with your business goals.
         </p>
       </div>
 
@@ -83,12 +72,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>Market analysis</TagListItem>
+        <TagListItem>Consumer surveys</TagListItem>
+        <TagListItem>Demographic studies</TagListItem>
+        <TagListItem>Competitor research</TagListItem>
+        <TagListItem>Opportunity mapping</TagListItem>
+        <TagListItem>Business assessment</TagListItem>
       </TagList>
     </Section>
   )
@@ -96,26 +85,16 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Strategic Planning" image={{ src: imageFamily, shape: 1, grayscale: false }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Based on our research findings, we develop a <strong className="font-semibold text-neutral-950">comprehensive strategy</strong> tailored to your business size and goals, designed to help you effectively reach and engage the outdoor audience market.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          We identify the most effective channels, messages, and touchpoints to connect with outdoor enthusiasts in ways that resonate with their lifestyle and values. Our strategies are designed to be sustainable, scalable, and adaptable to seasonal changes.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Each strategic plan includes clear <strong className="font-semibold text-neutral-950">performance metrics</strong> and implementation timelines, ensuring that we can measure success and make data-driven adjustments as needed.
         </p>
       </div>
 
@@ -123,8 +102,7 @@ function Build() {
         author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
         className="mt-12"
       >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
+        Zapping Moments' strategic approach helped us tap into the outdoor recreation market in ways we never thought possible for a business our size.
       </Blockquote>
     </Section>
   )
@@ -132,34 +110,16 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Implementation & Growth" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          We support your business through the <strong className="font-semibold text-neutral-950">implementation</strong> of your strategic plan, providing guidance and resources to ensure successful execution at every stage.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          Our approach focuses on creating a dynamic commercial environment where businesses don't just operate in isolation but become part of an <strong className="font-semibold text-neutral-950">interconnected community</strong>. This ecosystem approach helps all participants benefit from increased foot traffic and customer engagement.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+          We continuously monitor results, measure impact, and refine strategies to ensure <strong className="font-semibold text-neutral-950">sustainable growth</strong> and adaptation to changing market conditions, helping transform your city or region into a thriving hub of outdoor-oriented commerce.
         </p>
       </div>
 
@@ -167,17 +127,14 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+        <ListItem title="Implementation Support">
+          We provide hands-on guidance throughout the execution process, ensuring your team has the tools and knowledge needed for success.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+        <ListItem title="Community Building">
+          We help develop partnerships with complementary businesses to create a thriving ecosystem that benefits all participants.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+        <ListItem title="Ongoing Optimization">
+          Through regular performance reviews and market analysis, we continuously refine strategies to maximize results and adapt to changing trends.
         </ListItem>
       </List>
     </Section>
@@ -196,42 +153,32 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        title="Connecting Business and Community"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          We believe in creating sustainable business growth through authentic connections with the outdoor community. Our values guide our approach to developing strategies that benefit businesses, consumers, and local environments alike.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Research-Driven">
+            Our strategies are built on thorough research and data analysis, ensuring that every recommendation is backed by solid evidence and market insights.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Community-Focused">
+            We prioritize solutions that strengthen local communities and create vibrant commercial environments where businesses and consumers thrive together.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            We understand that each business and region has unique characteristics, and we customize our approach to leverage these distinct qualities.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Transparent">
+            We maintain open communication throughout our process, providing clear insights into our methodologies and the reasoning behind our recommendations.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Sustainable">
+            We develop strategies that promote long-term growth and foster positive relationships with the outdoor community and natural environment.
           </GridListItem>
           <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+            We continuously explore new approaches to connecting businesses with outdoor enthusiasts, embracing emerging trends and technologies.
           </GridListItem>
         </GridList>
       </Container>
@@ -242,7 +189,7 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'We develop strategic plans to help businesses reach outdoor audiences, creating thriving commercial environments that benefit entire communities.',
 }
 
 export default function Process() {
@@ -250,9 +197,7 @@ export default function Process() {
     <>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We develop a strategic plan aimed at boosting small, medium, and large businesses by reaching a growing audience of people who spend time outdoors. Through studies, surveys, and market research, our goal is to create tailored solutions for each business, making each city or region a more dynamic and lively place.
         </p>
       </PageIntro>
 

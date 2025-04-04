@@ -49,12 +49,7 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
-]
+export const socialMediaProfiles = []
 
 export function SocialMedia({
   className,
@@ -63,6 +58,10 @@ export function SocialMedia({
   className?: string
   invert?: boolean
 }) {
+  if (socialMediaProfiles.length === 0) {
+    return null
+  }
+  
   return (
     <ul
       role="list"
@@ -72,7 +71,7 @@ export function SocialMedia({
         className,
       )}
     >
-      {socialMediaProfiles.map((socialMediaProfile) => (
+      {socialMediaProfiles.map((socialMediaProfile: any) => (
         <li key={socialMediaProfile.title}>
           <Link
             href={socialMediaProfile.href}

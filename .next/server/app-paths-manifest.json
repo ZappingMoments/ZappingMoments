@@ -1,1 +1,5 @@
-{}
+{
+  "/icon.png/route": "app/icon.png/route.js",
+  "/nuir/page": "app/nuir/page.js",
+  "/page": "app/page.js"
+}

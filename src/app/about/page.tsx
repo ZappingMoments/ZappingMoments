@@ -28,27 +28,27 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        eyebrow="Our values"
+        title="A people-centric company focused on human connection."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          We are a team united by our commitment to help people reconnect in meaningful ways.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Community" invert>
+            We believe in the power of communities to foster genuine connections and support 
+            each other's growth and well-being.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Sustainability" invert>
+            By encouraging people to engage in shared experiences, we contribute to a more 
+            sustainable lifestyle and a greener world.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Authenticity" invert>
+            We value real human interactions that go beyond surface-level digital connections, 
+            promoting deeper and more meaningful relationships.
           </GridListItem>
         </GridList>
       </Container>
@@ -181,7 +181,7 @@ function Team() {
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'We are a Portuguese startup on a mission to help people reconnect and build more meaningful relationships with each other.',
 }
 
 export default async function About() {
@@ -189,31 +189,28 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Reconnecting people in a digital world">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          We are a people-centric company, focused on humans as social beings who need real interaction.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            The idea started in 2021, when we began exploring a concept that was becoming increasingly apparent: 
+            people are spending too much time at home, and most of their social interactions have been 
+            reduced to just a handful of clicks.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            As a company founded in 2025, we aim to help change this by creating better opportunities for people to go 
+            out more—both for their mental well-being and for a greener, better world. Our mission is to 
+            help people reconnect and build more meaningful relationships with each other.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="2025" label="Founded" />
+          <StatListItem value="Portugal" label="Headquarters" />
+          <StatListItem value="1000+" label="Connections made" />
         </StatList>
       </Container>
 

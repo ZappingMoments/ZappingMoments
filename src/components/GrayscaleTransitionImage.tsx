@@ -15,7 +15,7 @@ export function GrayscaleTransitionImage(
   props: Pick<
     ImageProps,
     'src' | 'quality' | 'className' | 'sizes' | 'priority'
-  > & { alt?: string },
+  > & { alt?: string; disableGrayscale?: boolean },
 ) {
   let ref = useRef<React.ElementRef<'div'>>(null)
   let { scrollYProgress } = useScroll({
@@ -23,17 +23,21 @@ export function GrayscaleTransitionImage(
     offset: ['start 65%', 'end 35%'],
   })
   let grayscale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 1])
-  let filter = useMotionTemplate`grayscale(${grayscale})`
+  let filter = props.disableGrayscale 
+    ? undefined 
+    : useMotionTemplate`grayscale(${grayscale})`
 
   return (
     <div ref={ref} className="group relative">
       <MotionImage alt="" style={{ filter } as any} {...props} />
-      <div
-        className="pointer-events-none absolute top-0 left-0 w-full opacity-0 transition duration-300 group-hover:opacity-100"
-        aria-hidden="true"
-      >
-        <Image alt="" {...props} />
-      </div>
+      {!props.disableGrayscale && (
+        <div
+          className="pointer-events-none absolute top-0 left-0 w-full opacity-0 transition duration-300 group-hover:opacity-100"
+          aria-hidden="true"
+        >
+          <Image alt="" {...props} />
+        </div>
+      )}
     </div>
   )
 }

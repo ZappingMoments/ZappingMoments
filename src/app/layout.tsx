@@ -6,8 +6,16 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: '%s - Zapping Moments',
+    default: 'Zapping Moments - Reconnecting people in a digital world',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.png' },
+      { url: '/icon.png' }
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 
