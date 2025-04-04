@@ -526,9 +526,6 @@
   .collapse {
     visibility: collapse;
   }
-  .invisible {
-    visibility: hidden;
-  }
   .visible {
     visibility: visible;
   }
@@ -608,9 +605,6 @@
   }
   .z-0 {
     z-index: 0;
-  }
-  .z-6 {
-    z-index: 6;
   }
   .z-40 {
     z-index: 40;
@@ -887,9 +881,6 @@
     flex: none;
   }
   .flex-shrink {
-    flex-shrink: 1;
-  }
-  .shrink {
     flex-shrink: 1;
   }
   .grow {
@@ -1372,9 +1363,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .capitalize {
-    text-transform: capitalize;
-  }
   .lowercase {
     text-transform: lowercase;
   }
@@ -1506,10 +1494,6 @@
   }
   .\[mask-image\:linear-gradient\(to_bottom_left\,white_50\%\,transparent_60\%\)\] {
     mask-image: linear-gradient(to bottom left,white 50%,transparent 60%);
-  }
-  .select-all {
-    -webkit-user-select: all;
-    user-select: all;
   }
   .\*\:relative {
     :is(& > *) {
@@ -2688,15 +2672,6 @@
       }
     }
   }
-  .\[\&\>\:first-child\]\:before\:content-\[\\\"\\\\\\\\\\\\\\\\\\\"\\\"\] {
-    &>:first-child {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: \"\\\\\\\\\"\";
-        content: var(--tw-content);
-      }
-    }
-  }
   .\[\&\>\:last-child\]\:mb-0\! {
     &>:last-child {
       margin-bottom: calc(var(--spacing) * 0) !important;
@@ -2707,15 +2682,6 @@
       &::after {
         content: var(--tw-content);
         --tw-content: '”';
-        content: var(--tw-content);
-      }
-    }
-  }
-  .\[\&\>\:last-child\]\:after\:content-\[\\\"\\\\\\\\\\\\\\\\\\\"\\\"\] {
-    &>:last-child {
-      &::after {
-        content: var(--tw-content);
-        --tw-content: \"\\\\\\\\\"\";
         content: var(--tw-content);
       }
     }

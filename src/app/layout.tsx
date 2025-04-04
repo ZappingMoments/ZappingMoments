@@ -11,17 +11,22 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.png' },
-      { url: '/icon.png' }
+      { url: '/ZM.png?v=2' },
+      { url: '/icon.png?v=2' }
     ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    shortcut: '/ZM.png?v=2',
+    apple: '/ZM.png?v=2',
   },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
+      <head>
+        <link rel="icon" href="/ZM.png?v=3" />
+        <link rel="shortcut icon" href="/ZM.png?v=3" />
+        <link rel="apple-touch-icon" href="/ZM.png?v=3" />
+      </head>
       <body className="flex min-h-full flex-col">
         <RootLayout>{children}</RootLayout>
       </body>
