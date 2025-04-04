@@ -1,7 +1,7 @@
 import { useId } from 'react'
 import clsx from 'clsx'
 import Image from 'next/image'
-import logoImage from '@/images/zappingmomentspng.png'
+import logoImage from '@/images/ZM.png'
 
 export function Logomark({
   invert = false,
