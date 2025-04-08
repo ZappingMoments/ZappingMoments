@@ -23,14 +23,14 @@ export function GrayscaleTransitionImage(
     offset: ['start 65%', 'end 35%'],
   })
   let grayscale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 1])
-  let filter = props.disableGrayscale 
-    ? undefined 
-    : useMotionTemplate`grayscale(${grayscale})`
+  let filter = props.disableGrayscale === false
+    ? useMotionTemplate`grayscale(${grayscale})`
+    : undefined
 
   return (
     <div ref={ref} className="group relative">
       <MotionImage alt="" style={{ filter } as any} {...props} />
-      {!props.disableGrayscale && (
+      {props.disableGrayscale === false && (
         <div
           className="pointer-events-none absolute top-0 left-0 w-full opacity-0 transition duration-300 group-hover:opacity-100"
           aria-hidden="true"

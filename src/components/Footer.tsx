@@ -1,40 +1,57 @@
-import Link from 'next/link'
+'use client'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import { LocalizedLink } from '@/components/LocalizedLink'
+import { usePathname } from 'next/navigation'
+import { navigation as translations } from '@/lib/i18n/translations/navigation'
+import { defaultLanguage, isValidLanguage, type Language } from '@/lib/i18n/config'
 
-const navigation = [
+type NavigationSection = {
+  titleKey: keyof typeof translations.en
+  links: Array<{
+    titleKey: keyof typeof translations.en
+    href: string
+  }>
+}
+
+const navigation: NavigationSection[] = [
   {
-    title: 'Company',
+    titleKey: 'company',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'NUIR', href: '/nuir' },
-      { title: 'Contact us', href: '/contact' },
+      { titleKey: 'about', href: '/about' },
+      { titleKey: 'process', href: '/process' },
+      { titleKey: 'nuir', href: '/nuir' },
+      { titleKey: 'contactUs', href: '/contact' },
     ],
   },
 ]
 
 function Navigation() {
+  const pathname = usePathname()
+  const lang = pathname.split('/')[1] || defaultLanguage
+  const currentLang = isValidLanguage(lang) ? lang : defaultLanguage
+  const t = translations[currentLang as Language]
+
   return (
     <nav>
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-              {section.title}
+              {t[section.titleKey]}
             </div>
             <ul role="list" className="mt-4 text-sm text-neutral-700">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
-                  <Link
+                  <LocalizedLink
                     href={link.href}
                     className="transition hover:text-neutral-950"
                   >
-                    {link.title}
-                  </Link>
+                    {t[link.titleKey]}
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -59,27 +76,31 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 function NewsletterForm() {
+  const pathname = usePathname()
+  const lang = pathname.split('/')[1] || defaultLanguage
+  const currentLang = isValidLanguage(lang) ? lang : defaultLanguage
+  const t = translations[currentLang as Language].newsletter
+
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        {t.title}
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        {t.description}
       </p>
       <div className="relative mt-6">
         <input
           type="email"
-          placeholder="Email address"
+          placeholder={t.placeholder}
           autoComplete="email"
-          aria-label="Email address"
+          aria-label={t.placeholder}
           className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
-            aria-label="Submit"
+            aria-label={t.submit}
             className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
           >
             <ArrowIcon className="w-4" />
@@ -101,9 +122,9 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
+          <LocalizedLink href="/" aria-label="Home">
             <Logo className="h-24" />
-          </Link>
+          </LocalizedLink>
           <p className="text-sm text-neutral-700">
             © Zapping Moments lda. 2025
           </p>

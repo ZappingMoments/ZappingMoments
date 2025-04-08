@@ -12,7 +12,7 @@ import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import imageFamily from '@/images/desenhoazul.png'
+import imageFamily from '@/images/miradouro.png'
 import { type MDXEntry, loadArticles } from '@/lib/mdx'
 
 const clients = [

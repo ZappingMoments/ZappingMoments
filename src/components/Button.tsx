@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import { LocalizedLink } from '@/components/LocalizedLink'
 
 type ButtonProps = {
   invert?: boolean
+  localized?: boolean
 } & (
   | React.ComponentPropsWithoutRef<typeof Link>
   | (React.ComponentPropsWithoutRef<'button'> & { href?: undefined })
@@ -10,6 +12,7 @@ type ButtonProps = {
 
 export function Button({
   invert = false,
+  localized = false,
   className,
   children,
   ...props
@@ -29,6 +32,14 @@ export function Button({
       <button className={className} {...props}>
         {inner}
       </button>
+    )
+  }
+
+  if (localized) {
+    return (
+      <LocalizedLink className={className} href={props.href as string}>
+        {inner}
+      </LocalizedLink>
     )
   }
 
