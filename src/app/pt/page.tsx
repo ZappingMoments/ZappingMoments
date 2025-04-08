@@ -56,7 +56,7 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Nossa Missão"
-        title="Ajudando pessoas a reconectarem-se e construírem relações significativas."
+        title="Ajudando pessoas a reconectarem-se e construírem relações significantes."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -103,7 +103,7 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'Somos uma startup portuguesa ajudando pessoas a reconectarem-se e construírem relações significativas num mundo digital.',
+    'Somos uma startup portuguesa ajudando pessoas a reconectarem-se e construírem relações significantes num mundo digital.',
 }
 
 export default async function Home() {
@@ -112,7 +112,7 @@ export default async function Home() {
       <Container className="mt-6 sm:mt-8 md:mt-12">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-normal leading-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Reconectando pessoas num mundo digital, com base em Portugal.
+            Reconectando pessoas num mundo digital, com sede em Portugal.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             Somos uma startup portuguesa construída em torno de um conceito que começámos a explorar em 2021: 

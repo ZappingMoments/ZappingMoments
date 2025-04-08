@@ -14,7 +14,6 @@ import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
@@ -104,11 +103,11 @@ function Header({
   )
 }
 
-function NavigationRow({ children }: { children: React.ReactNode }) {
+function NavigationRow({ children, fullWidth = false }: { children: React.ReactNode, fullWidth?: boolean }) {
   return (
     <div className="even:mt-px sm:bg-neutral-950">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
+        <div className={`grid ${fullWidth ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2'}`}>{children}</div>
       </Container>
     </div>
   )
@@ -117,17 +116,22 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 function NavigationItem({
   href,
   children,
+  className,
 }: {
   href: string
   children: React.ReactNode
+  className?: string
 }) {
   return (
     <LocalizedLink
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className={clsx(
+        "group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex justify-center",
+        className
+      )}
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-full bg-neutral-900 opacity-0 transition group-hover:opacity-100" />
     </LocalizedLink>
   )
 }
@@ -144,7 +148,7 @@ function Navigation() {
         <NavigationItem href="/about">{t.about}</NavigationItem>
         <NavigationItem href="/process">{t.process}</NavigationItem>
       </NavigationRow>
-      <NavigationRow>
+      <NavigationRow fullWidth={true}>
         <NavigationItem href="/nuir">NUIR</NavigationItem>
       </NavigationRow>
     </nav>
@@ -263,12 +267,6 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           className="relative isolate flex w-full flex-col pt-16"
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            yOffset={-96}
-            interactive
-          />
-
           <main className="w-full flex-auto">{children}</main>
 
           <Footer />
