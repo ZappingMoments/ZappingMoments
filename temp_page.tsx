@@ -1,1 +1,1 @@
-import { Container } from "@/components/Container"; import { FadeIn } from "@/components/FadeIn"; import { useTranslation } from "@/lib/useTranslation"; export default function HomePage() { const { t } = useTranslation(); return ( <Container className="mt-24 sm:mt-32"><FadeIn><h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 sm:text-7xl">{t("home.title")}</h1><p className="mt-6 max-w-2xl text-xl text-neutral-600">{t("home.subtitle")}</p></FadeIn></Container>)}
+ 

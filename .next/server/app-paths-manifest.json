@@ -1,9 +1,9 @@
 {
   "/pt/page": "app/pt/page.js",
-  "/process/page": "app/process/page.js",
-  "/pt/process/page": "app/pt/process/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/pt/contact/page": "app/pt/contact/page.js",
   "/[lang]/process/page": "app/[lang]/process/page.js",
-  "/pt/nuir/page": "app/pt/nuir/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/pt/about/page": "app/pt/about/page.js"
+  "/en/page": "app/en/page.js",
+  "/[lang]/nuir/page": "app/[lang]/nuir/page.js",
+  "/pt/nuir/page": "app/pt/nuir/page.js"
 }
